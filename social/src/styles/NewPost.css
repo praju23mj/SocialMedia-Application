@@ -1,0 +1,127 @@
+.new-container{
+    max-width: 400px; /* Set a max-width for the feed container */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: space-between;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hh{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-left: -220px;
+        margin-top: 15px;
+        
+    }
+    .back-arrow {
+        margin-right: 10px;
+        cursor: pointer;
+        
+      }
+      .blacka{
+        position: relative;
+        left: -20px;
+        cursor: pointer;
+      }
+      .titles{
+        font-size: 20px;
+      }
+      .in{
+        width: 370px;
+        height: 300px;
+        background-color: rgb(227, 222, 222);
+        border-radius: 20px;
+      }
+      .txt{
+        background: none;
+        border: none;
+        margin-left: 8px;
+        width: 352px;
+        height: 280px;
+      }
+      .fold{
+        display: flex;
+        margin-top: 25px;
+        margin-right: 210px;
+      }
+      .choose{
+        padding: 0px 6px;
+        color: black;
+        cursor: pointer;
+      }
+    
+      .camera{
+        display: flex;
+        margin-top: 10px;
+        margin-right: 265px;
+      }
+    
+      .camtxt{
+        padding: 0px 6px;
+        color: black;
+      }
+    
+      .new-btn{
+        margin-top: 160px;
+      }
+    
+      .cre-btn{
+        padding: 8px 120px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+      }
+    
+      .gallery{
+        display: flex;
+        margin-top: 25px;
+        margin-right: 270px;
+      }
+    
+      .gal-img{
+        padding: 0px 6px;
+        color: black;
+        cursor: pointer;
+      }
+      .vt-cont{
+        display: flex;
+        margin-top: 10px;
+        margin-right: 280px;
+      }
+    
+      .gal-vedio{
+        padding: 0px 7px;
+        color: black;
+        cursor: pointer;
+      }
+      .fold, .gallery, .vt-cont, .camera {
+        display: flex; 
+      }
+    
+      /* Media Query for Phones (480px and below) */
+    @media (max-width: 480px) {
+      .titles {
+        font-size: 16px;
+      }
+    
+      .in {
+        height: 250px; /* Adjust height for smaller screens */
+      }
+    
+      .txt {
+        height: 230px;
+      }
+    
+      .cre-btn {
+        padding: 8px 20px; /* Reduce button size */
+      }
+    }

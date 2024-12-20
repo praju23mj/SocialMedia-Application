@@ -1,0 +1,164 @@
+.edit-container{
+    max-width: 400px; /* Set a max-width for the feed container */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    box-sizing: border-box;
+    }
+    
+    .edit-header{
+        position: relative;
+      height: 200px; /* Adjust height as needed */
+      background-size: cover;
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents image repetition */
+      border-bottom-left-radius: 10px; /* Optional: rounded corners */
+      border-bottom-right-radius: 10px; 
+    }
+    .arrow{
+      cursor: pointer;
+    }
+    .ehead{
+        position: relative;
+        top: -167px;
+        left: 60px;
+        color: white;
+    }
+    .circle {
+        width: 33px;
+        height: 33px;
+        background: #F4F4F4;
+        border-radius: 50%; /* Makes the div a circle */
+        position: absolute;
+        margin-top: -110px;
+        right: 20px;
+      }
+      
+      .pencil{
+        position: relative;
+        top: -197px;
+        right: -314px;
+      }
+
+      .profile11{
+        position:relative;
+        top: -140px;
+        left: -1px;
+      }
+
+
+      .circle1 {
+        width: 33px;
+        height: 33px;
+        background: #F4F4F4;
+        border-radius: 50%; /* Makes the div a circle */
+        position: relative;
+        bottom: 190px;
+        right: -100px;
+      
+      }
+      .pencil1{
+        position: relative;
+        bottom: 215px;
+        left: 107px;    
+      }
+
+
+      .edit-form {
+        padding: 20px ;
+        border-radius: 8px;
+        margin-left: 10px;
+      }
+
+      label{
+        display: block;
+      }
+
+      input{
+        width: 300px;
+        padding: 10px 35px 0px 0px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+
+      textarea{
+        width: 300px;
+        padding: 10px 10px 8px 0px ;
+        font-weight: 600;
+        font-size: 12px;
+        overflow: hidden; 
+        white-space: normal;
+        word-wrap: break-word;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+      .save{
+        position: relative;
+        bottom: -250px;
+        padding: 8px 100px;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+      }
+
+
+      /* Responsive Design */
+@media (max-width: 768px) { /* Tablet */
+  .edit-container {
+      max-width: 100%; /* Take full width of the screen */
+      padding: 15px;
+  }
+  
+  .edit-header {
+      height: 150px;
+  }
+  
+  input, textarea {
+      width: 100%; /* Adjust input fields to fit smaller screens */
+  }
+  
+  .save {
+      padding: 8px 50px;
+  }
+  
+  .ehead {
+      top: -140px;
+      left: 30px; /* Adjust the positioning */
+  }
+}
+
+@media (max-width: 480px) { /* Phone */
+  .edit-container {
+      max-width: 100%;
+      padding: 10px;
+  }
+  
+  .edit-header {
+      height: 120px;
+  }
+  
+  .circle, .circle1 {
+      width: 25px;
+      height: 25px;
+  }
+  
+  input, textarea {
+      width: 100%; /* Full width for smaller devices */
+      font-size: 12px;
+  }
+  
+  .save {
+      padding: 8px 30px;
+  }
+  
+  .ehead {
+      top: -120px;
+      left: 20px; /* Adjust for smaller screens */
+      font-size: 16px;
+  }
+}

@@ -1,0 +1,332 @@
+/* Feed Container */
+.feed {
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the content */
+    max-width: 400px; /* Set a max-width for the feed container */
+    width: 100%; /* Ensures responsiveness */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    gap: 10px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    background-color: #fff;
+    padding: 20px;
+    width: 100%; /* Takes full width of the feed container */
+   
+    margin-bottom: 0px; /* Spacing between header and feeds */
+}
+
+/* Sakshi Profile Image */
+.sakshi {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Name Container */
+.name {
+    margin-left: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Feeds Heading */
+.heading {
+    align-self: flex-start; /* Align the heading to the left */
+    width: 100%; /* Full width */
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.heading h1 {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* Arnav Box */
+.arnav-box {
+    background-color: #F7EBFF;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the start */
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px; /* Add padding for spacing */
+    box-sizing: border-box;
+}
+
+/* Header Section: Image and Name */
+.arnav-header {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Space between header and content */
+}
+
+.boy {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.boy-name {
+    margin-left: 15px;
+}
+
+.boy-name h3, .boy-name small {
+    margin: 0;
+}
+.boy-name small{
+    color: #555;
+}
+
+/* Paragraph Content */
+.arnav-content {
+    width: 100%; /* Full width to ensure p tag spans properly */
+}
+
+.arnav-content p {
+    margin: 0; /* Reset default margins */
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5; /* Improve readability */
+}
+.arnav-content p span {
+    color: blue;
+}
+
+.images{
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.new, new1{
+object-fit: cover;
+border-radius: 5px;
+}
+.heart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure it takes up the full width of the parent */
+    padding: 0 0 0 10px; /* Optional padding for better spacing */
+    box-sizing: border-box;
+}
+
+.share{
+    border: none;
+    cursor: pointer;
+    padding-right: 0px 0px 0px 0px;
+}
+.send{
+    margin-left: 150px;
+}
+
+
+
+.sneha-box{
+    background-color: #FFFAEE;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the start */
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px; /* Add padding for spacing */
+    box-sizing: border-box;
+    
+}
+
+.sneha-header {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Space between header and content */
+}
+
+
+.girl {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.girl-name {
+    margin-left: 15px;
+}
+
+.girl-name h3, .boy-name small {
+    margin: 0;
+}
+.girl-name small{
+    color: #555;
+}
+
+/* Paragraph Content */
+.sneha-content {
+    width: 100%; /* Full width to ensure p tag spans properly */
+}
+
+.sneha-content p {
+    margin: 0; /* Reset default margins */
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5; /* Improve readability */
+}
+.sneha-content p span {
+    color: blue;
+}
+
+.girl-image {
+    position: relative; /* Sets the container as a reference for absolute positioning */
+    display: inline-block; /* Ensures the container wraps the image */
+    width: fit-content; /* Optional: Adjusts container to content width */
+}
+
+.vt {
+    width: 330px; /* Adjust width for the first image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.Pause {
+    position: absolute; /* Positions the second image relative to the container */
+    top: 50%; /* Move the second image to the middle vertically */
+    left: 50%; /* Move the second image to the middle horizontally */
+    transform: translate(-50%, -50%); /* Aligns the center of the image */
+    width: 50px; /* Adjust width for the second image */
+    height: 50px; /* Adjust height */
+    border-radius: 50%; /* Optional: Circular shape for the second image */
+}
+
+.Plus{
+    position: absolute; 
+    bottom: -10px; /* Distance from the bottom of the container */
+    right: -20px; /* Distance from the right of the container */
+    border-radius: 50%; /* Optional: Circular shape */
+    cursor: pointer;
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .feed {
+        max-width: 600px; /* Adjust container width */
+        padding: 15px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .heading h1 {
+        font-size: 1.2rem;
+    }
+
+    .boy,
+    .girl {
+        width: 45px;
+        height: 45px;
+    }
+
+    .images {
+        flex-direction: row; /* Keep images in a row */
+        gap: 8px;
+    }
+
+    .new,
+    .new1 {
+        max-width: 120px; /* Smaller images for tablet */
+    }
+
+    .vt {
+        width: 280px; /* Reduce video/image size */
+    }
+
+    .Pause {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* For Phones */
+@media (max-width: 480px) {
+    .feed {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sakshi {
+        width: 50px;
+        height: 50px;
+    }
+
+    .heading h1 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .arnav-box,
+    .sneha-box {
+        padding: 10px;
+    }
+
+    .boy,
+    .girl {
+        width: 40px;
+        height: 40px;
+    }
+
+    .images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px;
+    }
+
+    .new,
+    .new1 {
+        max-width: 100%; /* Images take full width */
+        height: auto;
+    }
+
+    .vt {
+        width: 100%; /* Adjust to fit screen */
+    }
+
+    .Pause {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Plus {
+        bottom: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+    }
+}

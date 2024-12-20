@@ -1,0 +1,110 @@
+/* Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Image Grid */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+    overflow:hidden;
+  }
+  
+  .image-grid img {
+    width: 110px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-grid img:nth-child(2),
+.image-grid img:nth-child(5),
+.image-grid img:nth-child(8) {
+  grid-row: span 1; /* Allow movement by rows */
+  transform: translateY(-120px); /* Move upward by 20px */
+}
+
+.vibesnap-card {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px 50px 0 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    padding: 30px 0px 120px 0px;
+    margin-top: -130px;
+    
+  }
+
+
+  .vibesnaplogo {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Add some spacing between the image and the text */
+  }
+
+  .picalter {
+    width: 50px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 88px;
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  /* Google Button */
+.google-button {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: white;
+  border: 1px solid #ddd;
+  padding: 15px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: rgba(41, 41, 41, 1);
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.google-logo {
+  width: 20px;
+  margin-right: 8px;
+}
+
+/* Optional: Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+  .image-grid img {
+    height: 100px;
+  }
+  .image-grid img:nth-child(2),
+  .image-grid img:nth-child(5),
+  .image-grid img:nth-child(8) {
+    transform: translateY(-30px); /* Less shift on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+  .image-grid img:nth-child(2),
+  .image-grid img:nth-child(5),
+  .image-grid img:nth-child(8) {
+    transform: translateY(0); /* No shift for single-column layout */
+  }
+}
