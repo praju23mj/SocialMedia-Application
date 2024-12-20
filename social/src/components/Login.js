@@ -29,6 +29,7 @@ const Login = () => {
         navigate('/feed');
       } catch (error) {
         console.error("Google Login Failed:", error.message);
+        alert("Failed to log in. Please try again.");
       }
     };
 
