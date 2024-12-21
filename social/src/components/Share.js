@@ -11,27 +11,51 @@ import Sneha from "../assets/sneha.png";
 import Vedio from "../assets/vedio.png";
 import Pause from "../assets/HiPlay.png";
 import Plus from "../assets/plus.png";
-import twitter from '../assets/twitter.png'
+ import copy from '../assets/copy.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { addImage, removeImage } from '../Redux/imagesSlice';
+
 
 const Share = () => {
     const [isOpen,setIsOpen]=useState(true);
-    const [images,setImages]=useState([{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"},{img:twitter,name:"twitter"}])
-  return (
+    const images = useSelector((state) => state.images.images);
+    const dispatch = useDispatch();
+
+    return (
     <>
    
      <div className='share'>
      {isOpen && <>
      <div className='check'>
     </div>
-    <div className='popup-container' style={{display:"flex",flexDirection:"row",flexWrap:"wrap"}}>
-{
-    images.map((image)=>{
-        return <div >
-             <img src={image.img} alt='menu2' className='menu-img'/>
-             <p>{image.name}</p>
+    <div className='popup-container'>
+        <h1>Share Post</h1>
+        <div className='social-logo'>
+        {
+            images.map((image,index)=>{
+                return (
+                <div key={index}>
+                    <img 
+                    src={image.img}
+                    alt={image.name} 
+                    className='menu-img' />
+                    <p>{image.name}</p>
+                </div>
+                );
+            })
+        }
         </div>
-    })
-}
+        <h3>Page link</h3>
+        <div className='link-copy'>
+        <input
+          type='text'
+          value='https://www.arnav/feed'
+          readOnly
+          className='link-input'
+        />
+        <img src={copy} alt='copy' className='copy'/>
+        </div>
+        
     </div>
         </>
         }

@@ -6,11 +6,14 @@ import Share from './components/Share';
 import Profile from "./components/Profile";
 import EditP from './components/EditP';
 import NewPost from './components/NewPost';
-
+import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
+import store from './Redux/store';
 
 
 function App() {
   return (
+    <Provider store={store}>
       <Router>
         <Routes>
           <Route path="/" element={<Login/>}/>
@@ -21,6 +24,7 @@ function App() {
           <Route path='/newpost' element={<NewPost/>}/>
         </Routes>
       </Router>
+    </Provider>
   );
 }
 
