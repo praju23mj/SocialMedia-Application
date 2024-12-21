@@ -87,3 +87,68 @@
       margin-top: 120px;
       cursor: pointer;
     }
+
+    /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-header {
+    height: 150px; /* Reduce height for smaller devices */
+  }
+
+  .arrow {
+    right: 15px;
+  }
+
+  .edit-button {
+    padding: 8px 40px;
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .user-info {
+    margin-top: 30px;
+  }
+
+  .h2 {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr; /* One column on smaller screens */
+    gap: 10px;
+  }
+
+  .post-card img {
+    height: 150px; /* Reduce height for uniform look */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    height: 120px; /* Further reduce height for phones */
+  }
+
+  .edit-button {
+    padding: 6px 30px;
+    font-size: 12px; /* Smaller font size for phones */
+  }
+
+  .user-info p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr; /* Keep one column layout */
+  }
+
+  .post-card img {
+    height: 120px; /* Reduce height for smaller screens */
+  }
+
+  .add {
+    margin-top: 60px;
+    font-size: 14px;
+  }
+}

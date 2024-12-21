@@ -20,16 +20,10 @@ const NewPost = () => {
   const handleFileSelection = (event) => {
     const file = event.target.files[0];
     if (file) {
-      if (file.type.startsWith('image/')) {
-        console.log('Photo selected:', file);
+      if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
         setSelectedFile(file);
-        // Add logic for handling the photo file (e.g., preview or upload)
-      } else if (file.type.startsWith('video/')) {
-        console.log('Video selected:', file);
-        setSelectedFile(file);
-        // Add logic for handling the video file (e.g., preview or upload)
+        setShowFileOptions(false); // Hide file options after selection
       } else {
-        console.error('Invalid file type');
         alert('Please select a valid photo or video file.');
       }
     }
