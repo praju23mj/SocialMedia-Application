@@ -89,7 +89,7 @@
 /* Optional: Adjust for smaller screens */
 @media screen and (max-width: 768px) {
   .image-grid img {
-    height: 100px;
+    height: 100%;
   }
   .image-grid img:nth-child(2),
   .image-grid img:nth-child(5),
@@ -100,7 +100,8 @@
 
 @media screen and (max-width: 480px) {
   .image-grid {
-    grid-template-columns: 1fr;
+   height:100%;
+   /* grid-template-columns: 1fr; */
   }
   .image-grid img:nth-child(2),
   .image-grid img:nth-child(5),
