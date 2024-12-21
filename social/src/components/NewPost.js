@@ -10,16 +10,30 @@ import { useNavigate } from 'react-router-dom';
 
 const NewPost = () => {
   const [showFileOptions, setShowFileOptions] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
   const navigate=useNavigate();
 
   const backHandle=()=>{
     navigate('/profile')
   }
 
-  const handleFileSelection=(event)=>{
+  const handleFileSelection = (event) => {
     const file = event.target.files[0];
-    
-  }
+    if (file) {
+      if (file.type.startsWith('image/')) {
+        console.log('Photo selected:', file);
+        setSelectedFile(file);
+        // Add logic for handling the photo file (e.g., preview or upload)
+      } else if (file.type.startsWith('video/')) {
+        console.log('Video selected:', file);
+        setSelectedFile(file);
+        // Add logic for handling the video file (e.g., preview or upload)
+      } else {
+        console.error('Invalid file type');
+        alert('Please select a valid photo or video file.');
+      }
+    }
+  };
   return (
     <div className='new-container'>
       <div className='hh'>
@@ -56,8 +70,32 @@ const NewPost = () => {
         <img src={vimg} alt='vedio' className='gal-ved'/>
         Vedio
         </label>
+        <input
+    type='file'
+    id="video-input"
+    accept="video/*"
+    style={{ display: 'none' }}
+    onChange={handleFileSelection} // Function to handle video file selection
+  />
       </div>
         </>
+      )}
+      {selectedFile && (
+        <div className='file-preview'>
+          {selectedFile.type.startsWith('image/') && (
+            <img
+              src={URL.createObjectURL(selectedFile)}
+              alt='Selected'
+              className='preview-image'
+            />
+          )}
+          {selectedFile.type.startsWith('video/') && (
+            <video controls className='preview-video'>
+              <source src={URL.createObjectURL(selectedFile)} />
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
       )}
       
       

@@ -103,8 +103,18 @@
         color: black;
         cursor: pointer;
       }
+      
+
       .fold, .gallery, .vt-cont, .camera {
         display: flex; 
+      }
+      .file-preview{
+        position: absolute;
+        top: 120px;
+      }
+    
+      .preview-image,.preview-video{
+        object-fit: cover;
       }
     
       /* Media Query for Phones (480px and below) */
